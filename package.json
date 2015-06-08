@@ -1,0 +1,11 @@
+{
+  "name": "lambda2pushover",
+  "version": "0.0.0",
+  "description": "AWS lambda casting to pushover notification",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
