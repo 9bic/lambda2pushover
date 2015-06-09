@@ -4,11 +4,12 @@
   "description": "AWS lambda casting to pushover notification",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js",
+    "build": "rm l2p.zip; zip -r l2p.zip index.js credential.json node_modules"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-pushover": "^0.2.2"
+    "pushover-notifications": "^0.2.2"
   }
 }
