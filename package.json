@@ -5,11 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "build": "rm l2p.zip; zip -r l2p.zip index.js credential.json node_modules"
+    "package": "serverless package",
+    "deploy": "serverless deploy"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "pushover-notifications": "^1.2.0"
+  },
+  "devDependencies": {
+    "serverless": "^1.44.1",
+    "serverless-dotenv-plugin": "^2.1.1"
   }
 }

@@ -1,15 +1,16 @@
 # lambda2pushover
 aws SNS bridge to [Pushover](https://pushover.net/) 
 
-# Build(Zip Compression)
-``` touch credential.json```  
-``` json:credential.json
-{
-  "user": "YOUR PUSHOVER USER",
-  "token": "YOUR PUSHOVER TOKEN"
-}
-```  
-```npm run build``` (only OSX and Linux)
+
+# Deploy
+
+- using Serverless Framework
+
+```
+npm run deploy
+# or specify stage
+npm run deploy -- --stage prd
+```
 
 # test
 ``` npm test``` or  ```node test.js``` 
