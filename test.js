@@ -4,8 +4,13 @@ var event = {}, context = {};
 event.Records = [];
 event.Records.push({Sns:{Subject: "hoge", Message: "moge"}});
 
-context.done = function(err, res) {
+callback = function(err, res) {
+  if (err) {
   console.log(err);
+  }
+
+  if (res) {
   console.log(res);
+  }
 };
-lambda.handler(event, context);
+lambda.handler(event, context, callback);

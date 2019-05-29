@@ -1,10 +1,9 @@
 var Pushover = require('pushover-notifications');
-var credential = require('./credential.json');
 
-exports.handler = function(event, context) {
+exports.handler = function(event, context, callback) {
   var pushover = new Pushover({
-    user: credential.user,
-    token: credential.token
+    user: process.env.PUSHOVER_USER,
+    token: process.env.PUSHOVER_TOKEN
   });
 
   var snsSubject = event.Records[0].Sns.Subject;
@@ -15,8 +14,12 @@ exports.handler = function(event, context) {
   };
 
   pushover.send(msg, function(err, res) {
-    console.log(err);
-    console.log(res);
-    context.done(err, res);
-  }); 
+    if (err) {
+      callback(err.toString());
+    }
+
+    if (res) {
+      callback(null, res.toString());
+    }
+  });
 };
