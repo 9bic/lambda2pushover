@@ -2,6 +2,15 @@
 aws SNS bridge to [Pushover](https://pushover.net/) 
 
 
+# Configure
+
+- create `.env` file
+
+```
+PUSHOVER_USER=<<your pushover UserToken>>
+PUSHOVER_TOKEN=<<your pushover AppToken>>
+```
+
 # Deploy
 
 - using Serverless Framework
