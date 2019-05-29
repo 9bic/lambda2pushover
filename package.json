@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pushover-notifications": "^0.2.2"
+    "pushover-notifications": "^1.2.0"
   }
 }
