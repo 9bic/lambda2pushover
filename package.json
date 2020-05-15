@@ -14,7 +14,7 @@
     "pushover-notifications": "^1.2.0"
   },
   "devDependencies": {
-    "serverless": "^1.48.2",
+    "serverless": "^1.71.0",
     "serverless-dotenv-plugin": "^2.1.1"
   }
 }
